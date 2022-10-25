@@ -25,11 +25,11 @@ Projects List View
             <tbody>
                 {% for task in show_project.tasks.all %}
                 <tr>
-                    <td>{{task.name}}</td>
-                    <td>{{task.assignee}}</td>
-                    <td>{{task.start_date}}</td>
-                    <td>{{task.due_date}}</td>
-                    <td>{{task.is_completed|yesno:"Yes,No"}}</td>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.assignee }}</td>
+                    <td>{{ task.start_date }}</td>
+                    <td>{{ task.due_date }}</td>
+                    <td>{{ task.is_completed|yesno:"Yes,No" }}</td>
                     {% endfor %}
                 </tr>
             </tbody>
