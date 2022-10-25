@@ -1,3 +1,15 @@
 from django.contrib import admin
+from .models import Task
 
 # Register your models here.
+
+@admin.register(Task)
+class Task(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "start_date",
+        "due_date",
+        "is_completed",
+        "project",
+        "assignee",
+    )
