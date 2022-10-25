@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+
 {% block content %}
     <main>
         <div>
             <h1>My Projects</h1>
-            {% if not project_list %}
+            {% if show_project|length == 0 %}
                 <p>You are not assigned to any projects</p>
-            {% endif %}
+            {% else %}
             <table>
                 <thead>
                     <tr>
@@ -14,16 +15,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for project in projects %}
+                    {% for project in show_project %}
                     <tr>
-                        <td>{{ project.name }}</td>
-                        <td>{{ project.number_of_tasks }}</td>
+                        <td><a href="{% url 'show_project' project.id %}">{{ project.name }}</a></td>
+                        <td>{{ project.tasks.all|length }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+            {% endif %}
         </div>
     </main>
-{% endblock content %}
-
+{% endblock content%}
 
