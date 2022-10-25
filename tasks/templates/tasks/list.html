@@ -22,10 +22,10 @@ Tasks List View
             <tbody>
                 <tr>
                     {% for task in show_task %}
-                    <td>{{task.name}}</td>
-                    <td>{{task.start_date}}</td>
-                    <td>{{task.due_date}}</td>
-                    <td>{{task.is_completed|yesno}}</td>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.start_date }}</td>
+                    <td>{{ task.due_date }}</td>
+                    <td>{{ task.is_completed|yesno }}</td>
                     {% endfor %}
                 </tr>
             </tbody>
