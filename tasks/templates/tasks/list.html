@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Tasks List View
+{% endblock title %}
+
+{% block content %}
+<main>
+    <div>
+        <h1>My Tasks</h1>
+        {% if show_task.all|length == 0 %}
+        <p>You have no tasks</p>
+        {% else %}
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Start date</th>
+                <th>Due date</th>
+                <th>Is completed</th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    {% for task in show_task %}
+                    <td>{{task.name}}</td>
+                    <td>{{task.start_date}}</td>
+                    <td>{{task.due_date}}</td>
+                    <td>{{task.is_completed|yesno}}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+</main>
+{% endblock content %}
