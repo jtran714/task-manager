@@ -6,6 +6,7 @@ from projects.forms import ProjectForm
 
 # Create your views here.
 
+
 @login_required
 def list_projects(request):
     projects = Project.objects.filter(owner=request.user)

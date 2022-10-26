@@ -2,6 +2,7 @@ from django.db import models
 from projects.models import Project
 from django.conf import settings
 
+
 # Create your models here.
 
 
