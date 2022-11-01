@@ -1,0 +1,30 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+nav {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    padding: 16px;
+}
+
+body {
+	background: linear-gradient(70deg, #3ff3bd, #5d30db, #23a6d5, #7694e7);
+	background-size: 400% 400%;
+	animation: gradient 9s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
