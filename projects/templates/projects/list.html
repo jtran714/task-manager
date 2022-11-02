@@ -9,7 +9,7 @@
             <h1>My Projects</h1>
             {% if show_project|length == 0 %}
                 <p>
-                    <a href="{% url 'create_project' %}">Create a new project</a>
+                    <a class="button" href="{% url 'create_project' %}">Create a new project</a>
                 </p>
                 <p>You are not assigned to any projects</p>
             {% else %}
